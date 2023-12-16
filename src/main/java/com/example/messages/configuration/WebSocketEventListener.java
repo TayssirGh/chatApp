@@ -13,8 +13,8 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 import java.util.Objects;
 
 @Component
+@Slf4j
 @RequiredArgsConstructor
-@Slf4j // for logging the information when the user leaves the app
 public class WebSocketEventListener {
     private final SimpMessageSendingOperations messageTemplate;
     @EventListener
@@ -32,4 +32,5 @@ public class WebSocketEventListener {
 
         }
     }
+
 }
